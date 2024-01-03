@@ -7,19 +7,20 @@
   system ? builtins.currentSystem,
 }: let
   nvfetcher = pkgs.callPackage ./_sources/generated.nix {};
+  docs = pkgs.callPackage ./docs {};
 in {
   lib = import ./lib {inherit pkgs;}; # functions
   modules = import ./modules;
   overlays = import ./overlays; # nixpkgs overlays
 
   apple-cursor = pkgs.callPackage ./pkgs/apple-cursor {};
-  geist-mono = pkgs.callPackage ./pkgs/geist-mono {};
-  fragment-mono = pkgs.callPackage ./pkgs/fragment-mono {};
-  geist-sans = pkgs.callPackage ./pkgs/geist-sans {};
-  apple-fonts = pkgs.callPackage ./pkgs/apple-fonts {};
   apple-emoji = pkgs.callPackage ./pkgs/apple-emoji {};
+  apple-fonts = pkgs.callPackage ./pkgs/apple-fonts {};
   cura = pkgs.callPackage ./pkgs/cura {};
   discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
+  fragment-mono = pkgs.callPackage ./pkgs/fragment-mono {};
+  geist-mono = pkgs.callPackage ./pkgs/geist-mono {};
+  geist-sans = pkgs.callPackage ./pkgs/geist-sans {};
   gonvim-tools = pkgs.callPackage ./pkgs/gonvim-tools {};
   helm-ls = pkgs.callPackage ./pkgs/helm-ls {};
   icat = import (nvfetcher.icat.src) {inherit pkgs;};
