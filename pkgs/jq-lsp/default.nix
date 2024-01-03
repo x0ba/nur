@@ -8,7 +8,7 @@ in
   buildGoModule {
     inherit (nvfetcher) pname version src;
 
-    vendorHash = "sha256-ppQ81uERHBgOr/bm/CoDSWcK+IqHwvcL6RFi0DgoLuw=";
+    vendorHash = "sha256-8sZGnoP7l09ZzLJqq8TUCquTOPF0qiwZcFhojUnnEIY=";
 
     meta = with lib; {
       description = "jq language server";
