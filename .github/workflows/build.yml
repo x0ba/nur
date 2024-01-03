@@ -34,7 +34,7 @@ jobs:
         uses: cachix/cachix-action@v13
         with:
           name: ${{ matrix.cachixName }}
-          # signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
+          signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
       # TODO: build all packages in the repo with devour-flake, or similar
