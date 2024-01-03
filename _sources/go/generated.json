@@ -13,11 +13,11 @@
             "name": null,
             "owner": "abice",
             "repo": "go-enum",
-            "rev": "v0.5.8",
-            "sha256": "sha256-dJuMcOc+hc7V1jO0QNlOp6tXHzuo4P3haNL1eQo8tgc=",
+            "rev": "v0.6.0",
+            "sha256": "sha256-Mt45Qz8l++bvBLKEpbX0m8iTkHDpsZtdYhhHUprQKY8=",
             "type": "github"
         },
-        "version": "v0.5.8"
+        "version": "v0.6.0"
     },
     "gomvp": {
         "cargoLocks": null,
@@ -53,15 +53,15 @@
             "name": null,
             "owner": "mrjosh",
             "repo": "helm-ls",
-            "rev": "v0.0.7",
-            "sha256": "sha256-XTY32B0RkLcZxTuKWUtZlrrUARkoT2+qYkL8Amai2cE=",
+            "rev": "v0.0.8",
+            "sha256": "sha256-q9RK7wTEbwptzNrXzifq6vUpOKD3idsG5FZKpQZ1uCc=",
             "type": "github"
         },
-        "version": "v0.0.7"
+        "version": "v0.0.8"
     },
     "jq-lsp": {
         "cargoLocks": null,
-        "date": "2023-10-16",
+        "date": "2024-01-01",
         "extract": null,
         "name": "jq-lsp",
         "passthru": null,
@@ -73,11 +73,11 @@
             "name": null,
             "owner": "wader",
             "repo": "jq-lsp",
-            "rev": "b4707e7776a4eb3093b1a7533ebd41368240095a",
-            "sha256": "sha256-AU4xGweeFx+kSsrqkTtSjl+N77cITF/qvAVZGUZY5SE=",
+            "rev": "80c097c71b141dd07a17741bbd94ec28842d124e",
+            "sha256": "sha256-i/VnFtQ02TtVtGJd7w9uYOsTRLYwReX7aqxFHKBU6io=",
             "type": "github"
         },
-        "version": "b4707e7776a4eb3093b1a7533ebd41368240095a"
+        "version": "80c097c71b141dd07a17741bbd94ec28842d124e"
     },
     "json-to-struct": {
         "cargoLocks": null,

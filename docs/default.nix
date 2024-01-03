@@ -49,7 +49,7 @@
       cat ${doc.optionsCommonMark} >> $out
     '';
   convert = md:
-    pkgs.runCommand "nekowinston-nur.html" {nativeBuildInputs = with pkgs; [pandoc texinfo];} ''
+    pkgs.runCommand "x0ba-nur.html" {nativeBuildInputs = with pkgs; [pandoc texinfo];} ''
       mkdir $out
       cp ${css} style.css
       # pandoc --css="pandoc.css" --to=html5 -s -f markdown+smart --metadata pagetitle="Nekowinston-nur options" -o $out/index.html ${builtins.concatStringsSep " " md}

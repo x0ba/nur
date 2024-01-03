@@ -1,5 +1,5 @@
 {
-  description = "nekowinston NUR repository";
+  description = "x0ba NUR repository";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -35,7 +35,7 @@
   };
 
   nixConfig = {
-    extra-substituters = ["https://nekowinston.cachix.org"];
-    extra-trusted-public-keys = ["nekowinston.cachix.org-1:lucpmaO+JwtoZj16HCO1p1fOv68s/RL1gumpVzRHRDs="];
+    extra-substituters = ["https://x0ba.cachix.org"];
+    extra-trusted-public-keys = ["x0ba.cachix.org-1:+WLqIY3Ygu/++D57/ZeUSO9jbDwnhQ6vzCXtaghpn9E="];
   };
 }

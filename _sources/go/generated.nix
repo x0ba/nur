@@ -3,13 +3,13 @@
 {
   go-enum = {
     pname = "go-enum";
-    version = "v0.5.8";
+    version = "v0.6.0";
     src = fetchFromGitHub {
       owner = "abice";
       repo = "go-enum";
-      rev = "v0.5.8";
+      rev = "v0.6.0";
       fetchSubmodules = false;
-      sha256 = "sha256-dJuMcOc+hc7V1jO0QNlOp6tXHzuo4P3haNL1eQo8tgc=";
+      sha256 = "sha256-Mt45Qz8l++bvBLKEpbX0m8iTkHDpsZtdYhhHUprQKY8=";
     };
   };
   gomvp = {
@@ -26,26 +26,26 @@
   };
   helm-ls = {
     pname = "helm-ls";
-    version = "v0.0.7";
+    version = "v0.0.8";
     src = fetchFromGitHub {
       owner = "mrjosh";
       repo = "helm-ls";
-      rev = "v0.0.7";
+      rev = "v0.0.8";
       fetchSubmodules = false;
-      sha256 = "sha256-XTY32B0RkLcZxTuKWUtZlrrUARkoT2+qYkL8Amai2cE=";
+      sha256 = "sha256-q9RK7wTEbwptzNrXzifq6vUpOKD3idsG5FZKpQZ1uCc=";
     };
   };
   jq-lsp = {
     pname = "jq-lsp";
-    version = "b4707e7776a4eb3093b1a7533ebd41368240095a";
+    version = "80c097c71b141dd07a17741bbd94ec28842d124e";
     src = fetchFromGitHub {
       owner = "wader";
       repo = "jq-lsp";
-      rev = "b4707e7776a4eb3093b1a7533ebd41368240095a";
+      rev = "80c097c71b141dd07a17741bbd94ec28842d124e";
       fetchSubmodules = false;
-      sha256 = "sha256-AU4xGweeFx+kSsrqkTtSjl+N77cITF/qvAVZGUZY5SE=";
+      sha256 = "sha256-i/VnFtQ02TtVtGJd7w9uYOsTRLYwReX7aqxFHKBU6io=";
     };
-    date = "2023-10-16";
+    date = "2024-01-01";
   };
   json-to-struct = {
     pname = "json-to-struct";

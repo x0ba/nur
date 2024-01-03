@@ -1,7 +1,7 @@
-# nekowinston/nur
+# x0ba/nur
 
-[![Build and populate cache](https://github.com/nekowinston/nur/actions/workflows/build.yml/badge.svg)](https://github.com/nekowinston/nur/actions/workflows/build.yml)
-[![Cachix Cache](https://img.shields.io/badge/cachix-nekowinston-blue.svg)](https://nekowinston.cachix.org)
+[![Build and populate cache](https://github.com/x0ba/nur/actions/workflows/build.yml/badge.svg)](https://github.com/x0ba/nur/actions/workflows/build.yml)
+[![Cachix Cache](https://img.shields.io/badge/cachix-x0ba-blue.svg)](https://x0ba.cachix.org)
 
 ## What's available
 
@@ -33,14 +33,14 @@ With `overlays`:
 {
   inputs = {
     nur.url = "github:nix-community/NUR";
-    nekowinston-nur.url = "github:nekowinston/nur";
+    x0ba-nur.url = "github:x0ba/nur";
   };
 
   outputs = {
     self,
     nixpkgs,
     nur,
-    nekowinston-nur,
+    x0ba-nur,
     ...
   }: let
     overlays = [
@@ -51,12 +51,12 @@ With `overlays`:
           pkgs = prev;
           repoOverrides = {
             # other repo overrides
-            nekowinston = nekowinston-nur.packages.${prev.system};
+            x0ba = x0ba-nur.packages.${prev.system};
           };
         };
       })
       # my overlays
-      nekowinston.nur.overlays.default
+      x0ba.nur.overlays.default
     ];
   in {
     system = "x86_64-linux";
@@ -81,7 +81,7 @@ With `overlays`:
 [discover]: https://github.com/trigg/Discover
 [gonvim]: https://github.com/ray-x/go.nvim
 [helm-ls]: https://github.com/mrjosh/helm-ls
-[icat]: https://github.com/nekowinston/icat
+[icat]: https://github.com/x0ba/icat
 [jq-lsp]: https://github.com/wader/jq-lsp
 [mopidy-pi]: https://github.com/tkem/mopidy-podcast-itunes
 [org-stats]: https://github.com/caarlos0/org-stats

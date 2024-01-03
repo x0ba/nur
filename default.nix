@@ -37,4 +37,7 @@ in {
       else pkgs.callPackage;
   in
     callPackage ./pkgs/wezterm-nightly {};
+
+  docs-md = docs.md;
+  docs-html = docs.html;
 }

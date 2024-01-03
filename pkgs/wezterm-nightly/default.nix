@@ -26,7 +26,7 @@
 in
   rustPlatform.buildRustPackage rec {
     inherit (nvfetcher) pname src;
-    version = "${builtins.replaceStrings ["-"] [""] nvfetcher.date}-nekowinston-${builtins.substring 0 7 nvfetcher.version}";
+    version = "${builtins.replaceStrings ["-"] [""] nvfetcher.date}-x0ba-${builtins.substring 0 7 nvfetcher.version}";
 
     cargoLock = nvfetcher.cargoLock."Cargo.lock";
     doCheck = false;
