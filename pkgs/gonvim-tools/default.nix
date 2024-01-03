@@ -10,7 +10,7 @@
         // content))
     {
       go-enum = {
-        vendorHash = "sha256-qe7nfVkCn4YqFpiBXLyiWSuSnr/ObLauT9yAt4GfqlA=";
+        vendorHash = "sha256-YzIVI+PLZt24s/KjTxifWrvjrIU8jLvkC1lgw4yG6cg=";
         meta = with lib; {
           description = "An enum generator for go";
           homepage = "https://github.com/abice/go-enum";
