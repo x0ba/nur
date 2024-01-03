@@ -1,0 +1,3 @@
+{
+  imports = [./mac-wallpaper.nix];
+}

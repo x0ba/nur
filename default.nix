@@ -1,0 +1,39 @@
+{
+  pkgs ?
+    import <nixpkgs> {
+      inherit system;
+      overlays = [(import (builtins.fetchTarball "https://github.com/oxalica/rust-overlay/archive/master.tar.gz"))];
+    },
+  system ? builtins.currentSystem,
+}: let
+  nvfetcher = pkgs.callPackage ./_sources/generated.nix {};
+in {
+  lib = import ./lib {inherit pkgs;}; # functions
+  modules = import ./modules;
+  overlays = import ./overlays; # nixpkgs overlays
+
+  apple-cursor = pkgs.callPackage ./pkgs/apple-cursor {};
+  geist-mono = pkgs.callPackage ./pkgs/geist-mono {};
+  fragment-mono = pkgs.callPackage ./pkgs/fragment-mono {};
+  geist-sans = pkgs.callPackage ./pkgs/geist-sans {};
+  apple-fonts = pkgs.callPackage ./pkgs/apple-fonts {};
+  apple-emoji = pkgs.callPackage ./pkgs/apple-emoji {};
+  cura = pkgs.callPackage ./pkgs/cura {};
+  discover-overlay = pkgs.callPackage ./pkgs/discover-overlay {};
+  gonvim-tools = pkgs.callPackage ./pkgs/gonvim-tools {};
+  helm-ls = pkgs.callPackage ./pkgs/helm-ls {};
+  icat = import (nvfetcher.icat.src) {inherit pkgs;};
+  jq-lsp = pkgs.callPackage ./pkgs/jq-lsp {};
+  mopidy-podcast-itunes = pkgs.callPackage ./pkgs/mopidy-podcast-itunes {};
+  plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin {};
+  posy-improved-cursor = pkgs.callPackage ./pkgs/posy-improved-cursor {};
+  sizzy = pkgs.callPackage ./pkgs/sizzy {};
+  uhk-agent = pkgs.callPackage ./pkgs/uhk-agent {};
+  wezterm-nightly = let
+    callPackage =
+      if pkgs.stdenv.isDarwin
+      then pkgs.darwin.apple_sdk_11_0.callPackage
+      else pkgs.callPackage;
+  in
+    callPackage ./pkgs/wezterm-nightly {};
+}
