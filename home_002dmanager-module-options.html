@@ -37,12 +37,22 @@ Previous: <a href="darwin-module-options.html#darwin-module-options" accesskey="
 
 <ul class="mini-toc">
 <li><a href="#homemac_002dwallpaper" accesskey="1">home.mac-wallpaper</a></li>
+<li><a href="#programsghosttyenable" accesskey="2">programs.ghostty.enable</a></li>
+<li><a href="#programsghosttypackage" accesskey="3">programs.ghostty.package</a></li>
+<li><a href="#programsghosttyclearDefaultKeybindings" accesskey="4">programs.ghostty.clearDefaultKeybindings</a></li>
+<li><a href="#programsghosttyextraConfig" accesskey="5">programs.ghostty.extraConfig</a></li>
+<li><a href="#programsghosttykeybindings" accesskey="6">programs.ghostty.keybindings</a></li>
+<li><a href="#programsghosttysettings" accesskey="7">programs.ghostty.settings</a></li>
+<li><a href="#programsghosttyshellIntegrationenable" accesskey="8">programs.ghostty.shellIntegration.enable</a></li>
+<li><a href="#programsghosttyshellIntegrationenableBashIntegration" accesskey="9">programs.ghostty.shellIntegration.enableBashIntegration</a></li>
+<li><a href="#programsghosttyshellIntegrationenableFishIntegration">programs.ghostty.shellIntegration.enableFishIntegration</a></li>
+<li><a href="#programsghosttyshellIntegrationenableZshIntegration">programs.ghostty.shellIntegration.enableZshIntegration</a></li>
 </ul>
 <hr>
 <div class="section-level-extent" id="homemac_002dwallpaper">
 <div class="nav-panel">
 <p>
-Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+Next: <a href="#programsghosttyenable" accesskey="n" rel="next">programs.ghostty.enable</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
 </div>
 <h3 class="section" id="home_002emac_002dwallpaper">3.1 home.mac-wallpaper</h3>
 <a class="anchor" id="g_t_0023home_002emac_002dwallpaper"></a><p>Path to the wallpaper to set.
@@ -51,10 +61,245 @@ Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manag
 </p>
 <p><em class="emph">Default:</em> <code class="code">null</code>
 </p>
-<p><em class="emph">Example:</em> <code class="code">&quot;/Users/daniel/Pictures/Wallpapers/wallpaper.png&quot;</code>
+<p><em class="emph">Example:</em>
+<code class="code">&quot;/Users/winston/Pictures/Wallpapers/wallpaper.png&quot;</code>
 </p>
 <p><em class="emph">Declared by:</em> -
 <a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/mac-wallpaper.nix">modules/hm/mac-wallpaper.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="programsghosttyenable">
+<div class="nav-panel">
+<p>
+Next: <a href="#programsghosttypackage" accesskey="n" rel="next">programs.ghostty.package</a>, Previous: <a href="#homemac_002dwallpaper" accesskey="p" rel="prev">home.mac-wallpaper</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="programs_002eghostty_002eenable">3.2 programs.ghostty.enable</h3>
+<a class="anchor" id="g_t_0023programs_002eghostty_002eenable"></a><p>Whether to enable Ghostty terminal emulator.
+</p>
+<p><em class="emph">Type:</em> boolean
+</p>
+<p><em class="emph">Default:</em> <code class="code">false</code>
+</p>
+<p><em class="emph">Example:</em> <code class="code">true</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/ghostty.nix">modules/hm/ghostty.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="programsghosttypackage">
+<div class="nav-panel">
+<p>
+Next: <a href="#programsghosttyclearDefaultKeybindings" accesskey="n" rel="next">programs.ghostty.clearDefaultKeybindings</a>, Previous: <a href="#programsghosttyenable" accesskey="p" rel="prev">programs.ghostty.enable</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="programs_002eghostty_002epackage">3.3 programs.ghostty.package</h3>
+<a class="anchor" id="g_t_0023programs_002eghostty_002epackage"></a><p>The Ghostty package to use.
+</p>
+<p><em class="emph">Type:</em> null or package
+</p>
+<p><em class="emph">Default:</em> <code class="code">null</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/ghostty.nix">modules/hm/ghostty.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="programsghosttyclearDefaultKeybindings">
+<div class="nav-panel">
+<p>
+Next: <a href="#programsghosttyextraConfig" accesskey="n" rel="next">programs.ghostty.extraConfig</a>, Previous: <a href="#programsghosttypackage" accesskey="p" rel="prev">programs.ghostty.package</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="programs_002eghostty_002eclearDefaultKeybindings">3.4 programs.ghostty.clearDefaultKeybindings</h3>
+<a class="anchor" id="g_t_0023programs_002eghostty_002ecleardefaultkeybindings"></a><p>Clears all default keybindings when enabled.
+</p>
+<p><em class="emph">Type:</em> boolean
+</p>
+<p><em class="emph">Default:</em> <code class="code">false</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/ghostty.nix">modules/hm/ghostty.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="programsghosttyextraConfig">
+<div class="nav-panel">
+<p>
+Next: <a href="#programsghosttykeybindings" accesskey="n" rel="next">programs.ghostty.keybindings</a>, Previous: <a href="#programsghosttyclearDefaultKeybindings" accesskey="p" rel="prev">programs.ghostty.clearDefaultKeybindings</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="programs_002eghostty_002eextraConfig">3.5 programs.ghostty.extraConfig</h3>
+<a class="anchor" id="g_t_0023programs_002eghostty_002eextraconfig"></a><p>Additional configuration to add.
+</p>
+<p><em class="emph">Type:</em> strings concatenated with &ldquo;\n&rdquo;
+</p>
+<p><em class="emph">Default:</em> <code class="code">&quot;&quot;</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/ghostty.nix">modules/hm/ghostty.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="programsghosttykeybindings">
+<div class="nav-panel">
+<p>
+Next: <a href="#programsghosttysettings" accesskey="n" rel="next">programs.ghostty.settings</a>, Previous: <a href="#programsghosttyextraConfig" accesskey="p" rel="prev">programs.ghostty.extraConfig</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="programs_002eghostty_002ekeybindings">3.6 programs.ghostty.keybindings</h3>
+<a class="anchor" id="g_t_0023programs_002eghostty_002ekeybindings"></a><p>Set custom Ghostty keybindings.
+</p>
+<p>Keybindings consist of a key, optionally preceded by modifiers, and
+separated by the + symbol. Keys are spelled in English, such as &lsquo;minus&rsquo;
+for the &lsquo;-&rsquo; character, or &lsquo;left&rsquo; for the left arrow.
+</p>
+<p>The following key names can be used as modifiers: &lsquo;ctrl&rsquo;, &lsquo;super&rsquo;,
+&lsquo;shift&rsquo;, &lsquo;alt&rsquo;, &lsquo;caps_lock&rsquo;, &lsquo;num_lock&rsquo;
+</p>
+<p>The list of available actions that can be bound is located in the Action
+enum in this file:
+<a class="url" href="https://github.com/mitchellh/ghostty/blob/main/src/input/Binding.zig">https://github.com/mitchellh/ghostty/blob/main/src/input/Binding.zig</a>
+</p>
+<p><em class="emph">Type:</em> attribute set of string
+</p>
+<p><em class="emph">Default:</em> <code class="code">{ }</code>
+</p>
+<p><em class="emph">Example:</em>
+</p>
+<pre class="verbatim">{
+  &quot;super+shift+d&quot; = &quot;unbind&quot;;
+  &quot;super+shift+h&quot; = &quot;goto_split:left&quot;;
+  &quot;super+shift+j&quot; = &quot;goto_split:bottom&quot;;
+  &quot;super+shift+k&quot; = &quot;goto_split:top&quot;;
+  &quot;super+shift+l&quot; = &quot;goto_split:right&quot;;
+}
+</pre>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/ghostty.nix">modules/hm/ghostty.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="programsghosttysettings">
+<div class="nav-panel">
+<p>
+Next: <a href="#programsghosttyshellIntegrationenable" accesskey="n" rel="next">programs.ghostty.shellIntegration.enable</a>, Previous: <a href="#programsghosttykeybindings" accesskey="p" rel="prev">programs.ghostty.keybindings</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="programs_002eghostty_002esettings">3.7 programs.ghostty.settings</h3>
+<a class="anchor" id="g_t_0023programs_002eghostty_002esettings"></a><p>Configuration written to <code class="code">$XDG_CONFIG_HOME/ghostty/config</code>. The
+full list of settings is available in this file:
+<a class="url" href="https://github.com/mitchellh/ghostty/blob/main/src/config/Config.zig">https://github.com/mitchellh/ghostty/blob/main/src/config/Config.zig</a>
+</p>
+<p>To configure the shell integration, see the documentation for
+<code class="code">programs.ghostty.shellIntegration.enable</code>.
+</p>
+<p>The acceptable values are numbers, booleans, strings, or a list of these
+types. Lists will be turned
+</p>
+<p>This configuration can also include external configuration files
+</p>
+<p><em class="emph">Type:</em> attribute set of ((list of (string or boolean or signed
+integer or floating point number)) or string or boolean or signed
+integer or floating point number)
+</p>
+<p><em class="emph">Default:</em> <code class="code">{ }</code>
+</p>
+<p><em class="emph">Example:</em>
+</p>
+<pre class="verbatim">{
+  cursor-style-blink = false;
+  font-family = &quot;Roboto Mono&quot;;
+  font-size = 14;
+  window-theme = &quot;dark&quot;;
+}
+</pre>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/ghostty.nix">modules/hm/ghostty.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="programsghosttyshellIntegrationenable">
+<div class="nav-panel">
+<p>
+Next: <a href="#programsghosttyshellIntegrationenableBashIntegration" accesskey="n" rel="next">programs.ghostty.shellIntegration.enableBashIntegration</a>, Previous: <a href="#programsghosttysettings" accesskey="p" rel="prev">programs.ghostty.settings</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="programs_002eghostty_002eshellIntegration_002eenable">3.8 programs.ghostty.shellIntegration.enable</h3>
+<a class="anchor" id="g_t_0023programs_002eghostty_002eshellintegration_002eenable"></a><p>Whether to enable the managed Ghostty shell integration.
+</p>
+<p>With this option enabled, the <code class="code">shell-integration</code> directive is set
+to <code class="code">none</code>. The shell integration is added to Fish, Bash, and Zsh
+through their initialization scripts as opposed to being detected and
+managed by the terminal itself.
+</p>
+<p>The integration can be disabled per shell using the
+<code class="code">programs.ghostty.shellIntegration.enableXyzIntegration</code> settings.
+</p>
+<p>If <em class="emph">this</em> setting is disabled, it is not added to any shell, and
+the responsibility of enabling the shell integration must be handled by
+the terminal and your own config.
+</p>
+<p><em class="emph">Type:</em> boolean
+</p>
+<p><em class="emph">Default:</em> <code class="code">true</code>
+</p>
+<p><em class="emph">Example:</em> <code class="code">false</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/ghostty.nix">modules/hm/ghostty.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="programsghosttyshellIntegrationenableBashIntegration">
+<div class="nav-panel">
+<p>
+Next: <a href="#programsghosttyshellIntegrationenableFishIntegration" accesskey="n" rel="next">programs.ghostty.shellIntegration.enableFishIntegration</a>, Previous: <a href="#programsghosttyshellIntegrationenable" accesskey="p" rel="prev">programs.ghostty.shellIntegration.enable</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="programs_002eghostty_002eshellIntegration_002eenableBashIntegration">3.9 programs.ghostty.shellIntegration.enableBashIntegration</h3>
+<a class="anchor" id="g_t_0023programs_002eghostty_002eshellintegration_002eenablebashintegration"></a><p>Whether to enable Ghostty Bash integration.
+</p>
+<p><em class="emph">Type:</em> boolean
+</p>
+<p><em class="emph">Default:</em> <code class="code">config.programs.ghostty.shellIntegration.enable</code>
+</p>
+<p><em class="emph">Example:</em> <code class="code">true</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/ghostty.nix">modules/hm/ghostty.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="programsghosttyshellIntegrationenableFishIntegration">
+<div class="nav-panel">
+<p>
+Next: <a href="#programsghosttyshellIntegrationenableZshIntegration" accesskey="n" rel="next">programs.ghostty.shellIntegration.enableZshIntegration</a>, Previous: <a href="#programsghosttyshellIntegrationenableBashIntegration" accesskey="p" rel="prev">programs.ghostty.shellIntegration.enableBashIntegration</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="programs_002eghostty_002eshellIntegration_002eenableFishIntegration">3.10 programs.ghostty.shellIntegration.enableFishIntegration</h3>
+<a class="anchor" id="g_t_0023programs_002eghostty_002eshellintegration_002eenablefishintegration"></a><p>Whether to enable Ghostty Fish integration.
+</p>
+<p><em class="emph">Type:</em> boolean
+</p>
+<p><em class="emph">Default:</em> <code class="code">config.programs.ghostty.shellIntegration.enable</code>
+</p>
+<p><em class="emph">Example:</em> <code class="code">true</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/ghostty.nix">modules/hm/ghostty.nix</a>
+</p>
+<hr>
+</div>
+<div class="section-level-extent" id="programsghosttyshellIntegrationenableZshIntegration">
+<div class="nav-panel">
+<p>
+Previous: <a href="#programsghosttyshellIntegrationenableFishIntegration" accesskey="p" rel="prev">programs.ghostty.shellIntegration.enableFishIntegration</a>, Up: <a href="#home_002dmanager-module-options" accesskey="u" rel="up">home-manager module options</a> &nbsp; </p>
+</div>
+<h3 class="section" id="programs_002eghostty_002eshellIntegration_002eenableZshIntegration">3.11 programs.ghostty.shellIntegration.enableZshIntegration</h3>
+<a class="anchor" id="g_t_0023programs_002eghostty_002eshellintegration_002eenablezshintegration"></a><p>Whether to enable Ghostty Zsh integration.
+</p>
+<p><em class="emph">Type:</em> boolean
+</p>
+<p><em class="emph">Default:</em> <code class="code">config.programs.ghostty.shellIntegration.enable</code>
+</p>
+<p><em class="emph">Example:</em> <code class="code">true</code>
+</p>
+<p><em class="emph">Declared by:</em> -
+<a class="uref" href="https://github.com/x0ba/nur/tree/main/modules/hm/ghostty.nix">modules/hm/ghostty.nix</a>
 </p></div>
 </div>
 <hr>
