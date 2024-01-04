@@ -1,3 +1,6 @@
 {
-  imports = [./mac-wallpaper.nix];
+  imports = [
+    ./mac-wallpaper.nix
+    ./ghostty.nix
+  ];
 }

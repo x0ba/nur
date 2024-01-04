@@ -10,7 +10,7 @@ in {
   options.home.mac-wallpaper = mkOption {
     type = types.nullOr types.path;
     default = null;
-    example = "/Users/daniel/Pictures/Wallpapers/wallpaper.png";
+    example = "/Users/winston/Pictures/Wallpapers/wallpaper.png";
     description = "Path to the wallpaper to set.";
   };
 
@@ -18,10 +18,23 @@ in {
     mkIf (cfg != null && pkgs.stdenv.isDarwin)
     {
       home.activation.set-wallpaper = let
-        m = "${pkgs.m-cli}/bin/m";
+        killall = "${pkgs.killall}/bin/killall";
+        sqlite = "${pkgs.sqlite}/bin/sqlite3";
       in
         lib.hm.dag.entryAfter ["writeBoundary"] ''
-          ${m} "wallpaper" "${cfg}"
+          dpdb="$HOME/Library/Application Support/Dock/desktoppicture.db"
+
+          ${sqlite} "$dpdb" "insert into data values ('${cfg}');"
+          new_entry=$(${sqlite} "$dpdb" "select max(rowid) from data;")
+          pics=$(${sqlite} "$dpdb" "select rowid from pictures")
+
+          ${sqlite} "$dpdb" "delete from preferences;"
+
+          for pic in $pics; do
+            ${sqlite} "$dpdb" "insert into preferences (key, data_id, picture_id) values(1, $new_entry, $pic)"
+          done
+
+          ${killall} Dock
         '';
     };
 }
