@@ -29,7 +29,6 @@ in
   mopidy-podcast-itunes = pkgs.callPackage ./pkgs/mopidy-podcast-itunes { };
   plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin { };
   posy-improved-cursor = pkgs.callPackage ./pkgs/posy-improved-cursor { };
-  preview = pkgs.callPackage ./pkgs/preview { };
   sizzy = pkgs.callPackage ./pkgs/sizzy { };
   uhk-agent = pkgs.callPackage ./pkgs/uhk-agent { };
   wezterm-nightly =
