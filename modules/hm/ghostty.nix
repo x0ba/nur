@@ -1,11 +1,10 @@
 # This file has been adapted from the Kitty home-manager module but has
 # been changed significantly. This should be upstreamed to home-manager
 # when the project is out of beta.
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }:
 with lib; let
   cfg = config.programs.ghostty;
@@ -18,16 +17,18 @@ with lib; let
 
   toGhosttyConfig = generators.toKeyValue {
     listsAsDuplicateKeys = true;
-    mkKeyValue = key: value: let
-      value' =
-        (
-          if isBool value
-          then boolToString
-          else toString
-        )
-        value;
-      # TODO(clo4): trim off trailing zeroes for floats?
-    in "${key} = ${value'}";
+    mkKeyValue = key: value:
+      let
+        value' =
+          (
+            if isBool value
+            then boolToString
+            else toString
+          )
+            value;
+        # TODO(clo4): trim off trailing zeroes for floats?
+      in
+      "${key} = ${value'}";
   };
 
   toGhosttyKeybindings = generators.toKeyValue {
@@ -55,13 +56,14 @@ with lib; let
       fi
     '';
   };
-in {
+in
+{
   options.programs.ghostty = {
     enable = mkEnableOption "Ghostty terminal emulator";
 
     settings = mkOption {
       type = types.attrsOf anyConfigType;
-      default = {};
+      default = { };
       example = literalExpression ''
         {
           cursor-style-blink = false;
@@ -86,46 +88,48 @@ in {
       '';
     };
 
-    shellIntegration = let
-      defaultShellIntegration = {
-        default = cfg.shellIntegration.enable;
-        defaultText =
-          literalExpression "config.programs.ghostty.shellIntegration.enable";
+    shellIntegration =
+      let
+        defaultShellIntegration = {
+          default = cfg.shellIntegration.enable;
+          defaultText =
+            literalExpression "config.programs.ghostty.shellIntegration.enable";
+        };
+      in
+      {
+        enable = mkOption {
+          type = types.bool;
+          default = true;
+          example = false;
+          description = ''
+            Whether to enable the managed Ghostty shell integration.
+
+            With this option enabled, the `shell-integration` directive is
+            set to `none`. The shell integration is added to Fish, Bash, and
+            Zsh through their initialization scripts as opposed to being detected
+            and managed by the terminal itself.
+
+            The integration can be disabled per shell using the
+            `programs.ghostty.shellIntegration.enableXyzIntegration` settings.
+
+            If *this* setting is disabled, it is not added to any shell, and
+            the responsibility of enabling the shell integration must be handled
+            by the terminal and your own config.
+          '';
+        };
+
+        enableBashIntegration =
+          mkEnableOption "Ghostty Bash integration"
+          // defaultShellIntegration;
+
+        enableZshIntegration =
+          mkEnableOption "Ghostty Zsh integration"
+          // defaultShellIntegration;
+
+        enableFishIntegration =
+          mkEnableOption "Ghostty Fish integration"
+          // defaultShellIntegration;
       };
-    in {
-      enable = mkOption {
-        type = types.bool;
-        default = true;
-        example = false;
-        description = ''
-          Whether to enable the managed Ghostty shell integration.
-
-          With this option enabled, the `shell-integration` directive is
-          set to `none`. The shell integration is added to Fish, Bash, and
-          Zsh through their initialization scripts as opposed to being detected
-          and managed by the terminal itself.
-
-          The integration can be disabled per shell using the
-          `programs.ghostty.shellIntegration.enableXyzIntegration` settings.
-
-          If *this* setting is disabled, it is not added to any shell, and
-          the responsibility of enabling the shell integration must be handled
-          by the terminal and your own config.
-        '';
-      };
-
-      enableBashIntegration =
-        mkEnableOption "Ghostty Bash integration"
-        // defaultShellIntegration;
-
-      enableZshIntegration =
-        mkEnableOption "Ghostty Zsh integration"
-        // defaultShellIntegration;
-
-      enableFishIntegration =
-        mkEnableOption "Ghostty Fish integration"
-        // defaultShellIntegration;
-    };
 
     clearDefaultKeybindings = mkOption {
       type = types.bool;
@@ -137,7 +141,7 @@ in {
 
     keybindings = mkOption {
       type = with types; attrsOf str;
-      default = {};
+      default = { };
       description = ''
         Set custom Ghostty keybindings.
 
@@ -180,7 +184,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = mkIf (cfg.package != null) [cfg.package];
+    home.packages = mkIf (cfg.package != null) [ cfg.package ];
 
     xdg.configFile."ghostty/config" = {
       text = concatStringsSep "\n" [

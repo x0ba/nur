@@ -1,6 +1,6 @@
-{
-  stdenvNoCC,
-  fetchzip,
+{ stdenvNoCC
+, fetchzip
+,
 }:
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "geist-sans";
@@ -12,7 +12,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     hash = "sha256-nSN+Ql5hTd230w/u6VZyAZaPtFSaHGmMc6T1fgGTCME=";
   };
 
-  outputs = ["out"];
+  outputs = [ "out" ];
 
   installPhase = ''
     runHook preInstall

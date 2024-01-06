@@ -1,8 +1,8 @@
-{
-  fetchFromGitHub,
-  lib,
-  pkgs,
-  rustPlatform,
+{ fetchFromGitHub
+, lib
+, pkgs
+, rustPlatform
+,
 }:
 rustPlatform.buildRustPackage rec {
   pname = "vivid";
@@ -21,6 +21,6 @@ rustPlatform.buildRustPackage rec {
     description = "A themeable LS_COLORS generator with a rich filetype datebase";
     homepage = "https://github.com/sharkdp/vivid";
     license = licenses.asl20;
-    maintainers = [maintainers.nekowinston];
+    maintainers = [ maintainers.nekowinston ];
   };
 }

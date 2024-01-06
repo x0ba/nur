@@ -1,13 +1,14 @@
-{
-  appimageTools,
-  callPackage,
-  glib,
-  lib,
-  makeWrapper,
-  stdenvNoCC,
-  undmg,
-}: let
-  nvfetcher = callPackage ../../_sources/generated.nix {};
+{ appimageTools
+, callPackage
+, glib
+, lib
+, makeWrapper
+, stdenvNoCC
+, undmg
+,
+}:
+let
+  nvfetcher = callPackage ../../_sources/generated.nix { };
   pname = "sizzy";
 
   appimageContents = appimageTools.extractType2 {
@@ -22,15 +23,16 @@
     platforms = platforms.unix;
   };
 
-  darwinBuilder = arch: let
-    source = nvfetcher.${"sizzy-darwin-" + arch};
-  in
+  darwinBuilder = arch:
+    let
+      source = nvfetcher.${"sizzy-darwin-" + arch};
+    in
     stdenvNoCC.mkDerivation {
       inherit pname meta;
       inherit (source) version;
 
-      src = source.src.overrideAttrs (_: {name = "Sizzy.dmg";});
-      buildInputs = [undmg];
+      src = source.src.overrideAttrs (_: { name = "Sizzy.dmg"; });
+      buildInputs = [ undmg ];
       sourceRoot = ".";
 
       installPhase = ''
@@ -65,6 +67,5 @@ in
 
     aarch64-darwin = darwinBuilder "arm";
     x86_64-darwin = darwinBuilder "x64";
-  }
-  .${stdenvNoCC.hostPlatform.system}
-  or (throw "Unsupported platform ${stdenvNoCC.hostPlatform.system}")
+  }.${stdenvNoCC.hostPlatform.system}
+    or (throw "Unsupported platform ${stdenvNoCC.hostPlatform.system}")

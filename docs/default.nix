@@ -1,4 +1,5 @@
-{pkgs}: let
+{ pkgs }:
+let
   inherit (pkgs) lib;
 
   mkEval = module:
@@ -12,7 +13,7 @@
           };
         }
       ];
-      specialArgs = {inherit pkgs;};
+      specialArgs = { inherit pkgs; };
     };
 
   css = builtins.fetchurl {
@@ -20,28 +21,31 @@
     sha256 = "sha256:1hkbm8l3s3il5i409a6mafm8n2x48ly1jyn0m0h07l23rmrv7p89";
   };
 
-  mkDoc = name: options: let
-    doc = pkgs.nixosOptionsDoc {
-      options = lib.filterAttrs (n: _: n != "_module") options;
-      transformOptions = opt:
-        opt
-        // {
-          declarations =
-            map
-            (decl:
-              if lib.hasPrefix (toString ../.) (toString decl)
-              then let
-                subpath = lib.removePrefix "/" (lib.removePrefix (toString ../.) (toString decl));
-              in {
-                url = "https://github.com/x0ba/nur/tree/main/${subpath}";
-                name = subpath;
-              }
-              else decl)
-            opt.declarations;
-        };
-    };
-  in
-    pkgs.runCommand "${name}-module-doc.md" {} ''
+  mkDoc = name: options:
+    let
+      doc = pkgs.nixosOptionsDoc {
+        options = lib.filterAttrs (n: _: n != "_module") options;
+        transformOptions = opt:
+          opt
+          // {
+            declarations =
+              map
+                (decl:
+                  if lib.hasPrefix (toString ../.) (toString decl)
+                  then
+                    let
+                      subpath = lib.removePrefix "/" (lib.removePrefix (toString ../.) (toString decl));
+                    in
+                    {
+                      url = "https://github.com/x0ba/nur/tree/main/${subpath}";
+                      name = subpath;
+                    }
+                  else decl)
+                opt.declarations;
+          };
+      };
+    in
+    pkgs.runCommand "${name}-module-doc.md" { } ''
       cat >$out <<EOF
       # ${name} module options
       EOF
@@ -49,7 +53,7 @@
       cat ${doc.optionsCommonMark} >> $out
     '';
   convert = md:
-    pkgs.runCommand "x0ba-nur.html" {nativeBuildInputs = with pkgs; [pandoc texinfo];} ''
+    pkgs.runCommand "x0ba-nur.html" { nativeBuildInputs = with pkgs; [ pandoc texinfo ]; } ''
       mkdir $out
       cp ${css} style.css
       # pandoc --css="pandoc.css" --to=html5 -s -f markdown+smart --metadata pagetitle="Nekowinston-nur options" -o $out/index.html ${builtins.concatStringsSep " " md}
@@ -62,7 +66,8 @@
   nixos = mkDoc "nixos" nixosEval.options;
   darwin = mkDoc "darwin" darwinEval.options;
   hm = mkDoc "home-manager" hmEval.options;
-in {
-  html = convert [nixos darwin hm];
-  md = pkgs.linkFarm "md" (lib.mapAttrsToList (name: path: {inherit name path;}) ["nixos" "darwin" "hm"]);
+in
+{
+  html = convert [ nixos darwin hm ];
+  md = pkgs.linkFarm "md" (lib.mapAttrsToList (name: path: { inherit name path; }) [ "nixos" "darwin" "hm" ]);
 }

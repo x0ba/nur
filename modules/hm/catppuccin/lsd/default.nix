@@ -1,12 +1,12 @@
-{
-  config,
-  lib,
-  ...
+{ config
+, lib
+, ...
 }:
 with lib; let
   global = config.catppuccin;
   cfg = config.catppuccin.btop;
-in {
+in
+{
   options.catppuccin.lsd = {
     enable = mkEnableOption {
       type = types.bool;
@@ -14,7 +14,7 @@ in {
       description = "Enable catppuccin btop theme";
     };
     theme = mkOption {
-      type = types.enum ["mocha" "macchiato" "frappe" "latte"];
+      type = types.enum [ "mocha" "macchiato" "frappe" "latte" ];
       default = global.defaultTheme;
       description = "Choose a catppuccin btop theme";
     };

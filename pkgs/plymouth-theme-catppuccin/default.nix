@@ -1,7 +1,7 @@
-{
-  lib,
-  pkgs,
-  stdenvNoCC,
+{ lib
+, pkgs
+, stdenvNoCC
+,
 }:
 stdenvNoCC.mkDerivation {
   pname = "plymouth-theme-catppuccin";

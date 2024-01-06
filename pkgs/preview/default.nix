@@ -1,6 +1,6 @@
 { pkgs }:
 
-pkgs.writeShellScriptBin "preview"''
+pkgs.writeShellScriptBin "preview" ''
   [ "$1" = "" ] && exit 1
 
   handle_image() {

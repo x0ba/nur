@@ -1,9 +1,8 @@
-{
-  config,
-  lib,
-  options,
-  pkgs,
-  ...
+{ config
+, lib
+, options
+, pkgs
+, ...
 }:
 with lib; let
   global = config.catppuccin;
@@ -15,7 +14,8 @@ with lib; let
     rev = "ecb8562bb6181bb9f2285c360bbafeb383249ec3";
     sha256 = "sha256-ovVtupO5jWUw6cwA3xEzRe1juUB8ykfarMRVTglx3mk=";
   };
-in {
+in
+{
   options.catppuccin.btop = {
     enable = mkEnableOption {
       type = types.bool;
@@ -23,7 +23,7 @@ in {
       description = "Enable catppuccin btop theme";
     };
     theme = mkOption {
-      type = types.enum ["mocha" "macchiato" "frappe" "latte"];
+      type = types.enum [ "mocha" "macchiato" "frappe" "latte" ];
       default = global.defaultTheme;
       description = "Choose a catppuccin btop theme";
     };

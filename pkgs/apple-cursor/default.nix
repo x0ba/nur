@@ -1,9 +1,9 @@
-{
-  fetchFromGitHub,
-  lib,
-  python3Packages,
-  stdenvNoCC,
-  zip,
+{ fetchFromGitHub
+, lib
+, python3Packages
+, stdenvNoCC
+, zip
+,
 }:
 stdenvNoCC.mkDerivation rec {
   pname = "apple-cursor";
