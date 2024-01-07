@@ -27,6 +27,7 @@ in
   icat = import (nvfetcher.icat.src) { inherit pkgs; };
   jq-lsp = pkgs.callPackage ./pkgs/jq-lsp { };
   mopidy-podcast-itunes = pkgs.callPackage ./pkgs/mopidy-podcast-itunes { };
+  pixel-code = pkgs.callPackage ./pkgs/pixel-code { };
   plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin { };
   posy-improved-cursor = pkgs.callPackage ./pkgs/posy-improved-cursor { };
   sizzy = pkgs.callPackage ./pkgs/sizzy { };
