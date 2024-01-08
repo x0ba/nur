@@ -26,6 +26,7 @@ in
   helm-ls = pkgs.callPackage ./pkgs/helm-ls { };
   icat = import (nvfetcher.icat.src) { inherit pkgs; };
   jq-lsp = pkgs.callPackage ./pkgs/jq-lsp { };
+  liga-sfmono = pkgs.callPackage ./pkgs/liga-sfmono { };
   mopidy-podcast-itunes = pkgs.callPackage ./pkgs/mopidy-podcast-itunes { };
   pixel-code = pkgs.callPackage ./pkgs/pixel-code { };
   plymouth-theme-catppuccin = pkgs.callPackage ./pkgs/plymouth-theme-catppuccin { };
