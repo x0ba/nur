@@ -38,15 +38,15 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "f8564398fc67211b85d8e23860b09c0036cd7eb7";
+    version = "a9c5f535629a362e1bddda7d71018a61c973a83b";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "f8564398fc67211b85d8e23860b09c0036cd7eb7";
+      rev = "a9c5f535629a362e1bddda7d71018a61c973a83b";
       fetchSubmodules = true;
-      sha256 = "sha256-O+4z6hHyN/lpTOLbGKvZIoeuTebAG7eCJf1nwwaqkU4=";
+      sha256 = "sha256-9E0zjlqu9MGnlA/363c37gcmuRB9nH/05m4tWI8QCYY=";
     };
-    date = "2024-01-12";
+    date = "2024-01-17";
   };
   icat = {
     pname = "icat";
@@ -73,7 +73,7 @@
     version = "unknown";
     src = fetchurl {
       url = "https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg";
-      sha256 = "sha256-+Q4HInJBl3FLb29/x9utf7A55uh5r79eh/7hdQDdbSI=";
+      sha256 = "sha256-Mkf+GK4iuUhZdUdzMW0VUOmXcXcISejhMeZVm0uaRwY=";
     };
   };
   sf-mono = {
@@ -81,7 +81,7 @@
     version = "unknown";
     src = fetchurl {
       url = "https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg";
-      sha256 = "sha256-pqkYgJZttKKHqTYobBUjud0fW79dS5tdzYJ23we9TW4=";
+      sha256 = "sha256-tZHV6g427zqYzrNf3wCwiCh5Vjo8PAai9uEvayYPsjM=";
     };
   };
   sf-pro = {
@@ -89,7 +89,7 @@
     version = "unknown";
     src = fetchurl {
       url = "https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg";
-      sha256 = "sha256-nkuHge3/Vy8lwYx9z+pvsQZfzrNIP4K0OutpPl4yXn0=";
+      sha256 = "sha256-Mu0pmx3OWiKBmMEYLNg+u2MxFERK07BQGe3WAhEec5Q=";
     };
   };
   sizzy-darwin-arm = {
@@ -126,21 +126,21 @@
   };
   wezterm = {
     pname = "wezterm";
-    version = "6c36a4dda2527836af0e0aa076d5dd0bd8d3dd79";
+    version = "9181d010ff70b73ed314b3e36401b6a961af98b1";
     src = fetchFromGitHub {
       owner = "wez";
       repo = "wezterm";
-      rev = "6c36a4dda2527836af0e0aa076d5dd0bd8d3dd79";
+      rev = "9181d010ff70b73ed314b3e36401b6a961af98b1";
       fetchSubmodules = true;
-      sha256 = "sha256-bWcez8vJlZttrVmBjyXZBZIbSBE7tpu1lkVSH1T6Fw0=";
+      sha256 = "sha256-pmdaKgEix2IDxsD8eeVL8Uu87o0BG/wMZRvkU6jESWY=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./wezterm-6c36a4dda2527836af0e0aa076d5dd0bd8d3dd79/Cargo.lock;
+      lockFile = ./wezterm-9181d010ff70b73ed314b3e36401b6a961af98b1/Cargo.lock;
       outputHashes = {
         "xcb-1.2.1" = "sha256-zkuW5ATix3WXBAj2hzum1MJ5JTX3+uVQ01R1vL6F1rY=";
         "xcb-imdkit-0.2.0" = "sha256-L+NKD0rsCk9bFABQF4FZi9YoqBHr4VAZeKAWgsaAegw=";
       };
     };
-    date = "2024-01-11";
+    date = "2024-01-18";
   };
 }
