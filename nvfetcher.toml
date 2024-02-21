@@ -73,5 +73,5 @@ src.github = "samuelngs/apple-emoji-linux"
 fetch.url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/$ver/AppleColorEmoji.ttf"
 
 [icat]
-src.git = "https://github.com/x0ba/icat"
-fetch.github = "x0ba/icat"
+src.git = "https://github.com/nekowinston/icat"
+fetch.github = "nekowinston/icat"
