@@ -26,13 +26,13 @@
   };
   helm-ls = {
     pname = "helm-ls";
-    version = "v0.0.8";
+    version = "v0.0.10";
     src = fetchFromGitHub {
       owner = "mrjosh";
       repo = "helm-ls";
-      rev = "v0.0.8";
+      rev = "v0.0.10";
       fetchSubmodules = false;
-      sha256 = "sha256-q9RK7wTEbwptzNrXzifq6vUpOKD3idsG5FZKpQZ1uCc=";
+      sha256 = "sha256-m+kr1NIrWqQGbWxOOu2mbPEk3AQPt8KqsByylUanbTM=";
     };
   };
   jq-lsp = {

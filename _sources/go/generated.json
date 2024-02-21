@@ -53,11 +53,11 @@
             "name": null,
             "owner": "mrjosh",
             "repo": "helm-ls",
-            "rev": "v0.0.8",
-            "sha256": "sha256-q9RK7wTEbwptzNrXzifq6vUpOKD3idsG5FZKpQZ1uCc=",
+            "rev": "v0.0.10",
+            "sha256": "sha256-m+kr1NIrWqQGbWxOOu2mbPEk3AQPt8KqsByylUanbTM=",
             "type": "github"
         },
-        "version": "v0.0.8"
+        "version": "v0.0.10"
     },
     "jq-lsp": {
         "cargoLocks": null,
