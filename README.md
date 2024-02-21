@@ -6,7 +6,7 @@
 ## What's available
 
 | General Packages                      | Note                                                 | Version      |
-| ------------------------------------  | ----------------                                     | ----------   |
+| ------------------------------------- | ---------------------------------------------------- | ------------ |
 | [`apple-cursor`][apple-cursor]        |                                                      | 2.0.0        |
 | [`cura`][cura]                        | AppImage wrapper                                     | 5.4.0        |
 | [`discover-overlay`][discover]        |                                                      | 0.6.5        |
@@ -81,7 +81,7 @@ With `overlays`:
 [discover]: https://github.com/trigg/Discover
 [gonvim]: https://github.com/ray-x/go.nvim
 [helm-ls]: https://github.com/mrjosh/helm-ls
-[icat]: https://github.com/x0ba/icat
+[icat]: https://github.com/nekowinston/icat
 [jq-lsp]: https://github.com/wader/jq-lsp
 [mopidy-pi]: https://github.com/tkem/mopidy-podcast-itunes
 [org-stats]: https://github.com/caarlos0/org-stats
