@@ -38,13 +38,13 @@
   };
   gpt4all = {
     pname = "gpt4all";
-    version = "fa0a2129dcca6fe5b61f761c5a41fa38cfd4a871";
+    version = "a010a8a7ca3020e14a5e6c08a3426e0d987eef75";
     src = fetchFromGitHub {
       owner = "nomic-ai";
       repo = "gpt4all";
-      rev = "fa0a2129dcca6fe5b61f761c5a41fa38cfd4a871";
+      rev = "a010a8a7ca3020e14a5e6c08a3426e0d987eef75";
       fetchSubmodules = true;
-      sha256 = "sha256-FNvXNQv6M693HVQ3NzHXjMaAK1CkZwNdTiVABCHzm+c=";
+      sha256 = "sha256-NSRuocDkkwn1ztfpmvMQG0JX1x2qf5DL0wg3tMbOOw8=";
     };
     date = "2024-02-21";
   };
