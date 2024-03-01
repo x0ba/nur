@@ -33,6 +33,7 @@ in {
   sizzy = pkgs.callPackage ./pkgs/sizzy {};
   uhk-agent = pkgs.callPackage ./pkgs/uhk-agent {};
   ryan-mono = pkgs.callPackage ./pkgs/ryan-mono {};
+  sesh = pkgs.callPackage ./pkgs/sesh {};
   ryan-term = pkgs.callPackage ./pkgs/ryan-term {};
   wezterm-nightly = let
     callPackage =
